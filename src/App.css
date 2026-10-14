@@ -1,0 +1,33 @@
+.hero-carousel {
+  height: clamp(440px, 42vw, 600px);
+}
+
+.hero-carousel swiper-container,
+.hero-carousel swiper-slide {
+  display: block;
+  height: 100%;
+}
+
+.hero-carousel::part(bullet) {
+  background: white;
+  opacity: 0.6;
+}
+
+.hero-carousel::part(bullet-active) {
+  background: #a7f3d0;
+  opacity: 1;
+}
+
+.slick-slider {
+  margin-inline: -0.5rem;
+}
+
+.slick-list {
+  padding-block: 0.25rem;
+}
+
+@media (max-width: 639px) {
+  .hero-carousel {
+    height: 480px;
+  }
+}

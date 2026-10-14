@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #fbfcfa;
+  color: #15352f;
+  width: 100%;
+}
+
+@layer components {
+  .btn {
+    @apply rounded-full border border-secondColor bg-white px-8 py-2.5 text-center text-sm font-semibold text-secondColor transition hover:bg-secondColor hover:text-white focus:outline-none focus:ring-4 focus:ring-secondColor/20;
+  }
+}
+
+.slick-slide:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.slick-initialized .slick-slide {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(19 138 91 / 45%);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
